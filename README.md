@@ -28,15 +28,7 @@ For more environmental details and a full re-production of our results, please r
 
 ## Dataset
 
-Our code supports the following dataset:
-
-* [VLCS](https://wjdcloud.blob.core.windows.net/dataset/VLCS/VLCS.zip)
-* [PACS](https://wjdcloud.blob.core.windows.net/dataset/PACS.zip)
-* [Office-Home](https://wjdcloud.blob.core.windows.net/dataset/OfficeHome.zip)
-* [PAMAP2](https://wjdcloud.blob.core.windows.net/dataset/cycfed/pamap.tar.gz)
-* [COVID](https://wjdcloud.blob.core.windows.net/dataset/cycfed/covid19.tar.gz)
-* [OrganS-MNIST](https://wjdcloud.blob.core.windows.net/dataset/cycfed/medmnist.tar.gz)
-* [OrganA-MNIST](https://wjdcloud.blob.core.windows.net/dataset/cycfed/medmnistA.tar.gz)
+Our code supports the following dataset:Hrhp
 * [OrganC-MNIST](https://wjdcloud.blob.core.windows.net/dataset/cycfed/medmnistC.tar.gz)
 
 If you want to use your own dataset, please modifty `datautil/prepare_data.py` to contain the dataset.
@@ -45,15 +37,6 @@ If you want to use your own dataset, please modifty `datautil/prepare_data.py` t
 
 1. Modify the file in the scripts
 2. `bash run.sh`
-
-## Benchmark
-
-We offer a benchmark for OrganS-MNIST. Please note that the results are based on the data splits in `split/medmnist0.1`. Different data splits may lead different results. For complete parameters, please refer to `run.sh`.
-
-| Non-iid alpha | Base | FedAvg | FedProx | FedBN | FedAP | MetaFed |
-|----------|----------|----------|----------|----------|----------|----------|
-| 0.1 | 73.99 | 75.62 | 75.97 | 79.96 | 81.33 | 83.87 |
-| 0.01 | 75.83 | 74.81 | 75.09 | 81.85 | 82.87 | 84.98 |
 
 ## Customization
 
@@ -80,41 +63,11 @@ The toolkit is under active development and contributions are welcome! Feel free
 
 [5] Yiqiang, Chen, et al. "MetaFed: Federated Learning among Federations with Cyclic Knowledge Distillation for Personalized Healthcare." FL-IJCAI Workshop 2022.
 
-## Citation
-
-If you think this toolkit or the results are helpful to you and your research, please cite us!
-
-```
-@Misc{PersonalizedFL,
-howpublished = {\url{https://github.com/microsoft/PersonalizedFL}},   
-title = {PersonalizedFL: Personalized Federated Learning Toolkit},  
-author = {Lu, Wang and Wang, Jindong}
-}  
-```
 
 ## Contact
 
-- Wang lu: luwang@ict.ac.cn
-- [Jindong Wang](http://www.jd92.wang/): jindongwang@outlook.com
+- Jiaxin Wang: wangjx@hebut.edu.cn
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Trademarks
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
