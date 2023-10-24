@@ -1,12 +1,9 @@
-# PersonalizedFL: Personalized Federated Learning Codebase
+# FLPointcloud_HPR: Personalized Federated Learning Point cloud Human pose recognized
 
-An easy-to-learn, easy-to-extend, and for-fair-comparison codebase based on PyTorch for federated learning (FL). 
-Please note that this repository is designed mainly for research, and we discard lots of unnecessary extensions for a quick start.
-Example usage: when you want to recognize activities of different persons without accessing their privacy data; when you want to build a model based on multiple patients' data but not access their own data.
-
+In order to protect the privacy of human body data and solve the problem of recognizing human body posture 
+from the non-independent and identically distributed human body point cloud data, this project provides a solution framework.
+Please note that this framework is based on personalized federated learning and DCGNN.
 ## Implemented Algorithms
-
-**Note:** The code of [FedCLIP](https://arxiv.org/abs/2302.13485v1) will be released soon. Please stay tuned.
 
 As initial version, we support the following algoirthms. We are working on more algorithms. 
 
@@ -17,20 +14,16 @@ As initial version, we support the following algoirthms. We are working on more 
 5. FedAP [4].
 6. MetaFed [5].
 
-## Installation
-
+## environment
 ```
-git clone https://github.com/microsoft/PersonalizedFL.git
-cd PersonalizedFL
-```
-We recommend to use `Python 3.7.1` and `torch 1.7.1` which are in our development environment. 
-For more environmental details and a full re-production of our results, please refer to `luwang0517/torch10:latest` (docker) or `jindongwang/docker` (docker).
+We recommend to use `Python 3.7.1` and `torch 1.7.1` which are in our development environment.
+CUDA >= 10.0
+Package: glob, h5py, sklearn, plyfile, torch_scatter
 
 ## Dataset
 
-Our code supports the following dataset:Hrhp
-* [OrganC-MNIST](https://wjdcloud.blob.core.windows.net/dataset/cycfed/medmnistC.tar.gz)
-
+Our code supports the following dataset: Hrhp
+The sample of dataset are already put into the project and the full dataset will be update later.
 If you want to use your own dataset, please modifty `datautil/prepare_data.py` to contain the dataset.
 
 ## Usage
@@ -49,19 +42,27 @@ It is easy to design your own method following the steps:
 
 ## Contribution
 
-The toolkit is under active development and contributions are welcome! Feel free to submit issues and PRs to ask questions or contribute your code. If you would like to implement new features, please submit a issue to discuss with us first.
+ Federated learning human posture recognition framework(FL-HPR) is proposed for human posture sensing on nursing robots.
+
+ A federated learning method is introduced for human point cloud segmentation, which can effectively generalize personalized models for local clients.
+
+ A humanjoint estimation method based on dynamic graph edge convolutional network is proposed.
+
+ We implement a demo on dual-arm nursing robots on demonstrate the performance of the human posture recognition in Non-IID data settings and validated the effectiveness of FL-HPR.
 
 ## Reference
 
-[1] McMahan, Brendan, et al. "Communication-efficient learning of deep networks from decentralized data." Artificial intelligence and statistics. PMLR, 2017.
+[1]Y.Wang, Y. Sun, Z. Liu, S. E. Sarma,M.M.Bronstein, J.M. "Solomon,Dynamic graph cnn for learning on point clouds",ACM Transactionson Graphics(tog)38(5)(2019)1–12.
 
-[2] Li, Tian, et al. "Federated optimization in heterogeneous networks." Proceedings of Machine Learning and Systems 2 (2020): 429-450.
+[2] McMahan, Brendan, et al. "Communication-efficient learning of deep networks from decentralized data." Artificial intelligence and statistics. PMLR, 2017.
 
-[3] Li, Xiaoxiao, et al. "FedBN: Federated Learning on Non-IID Features via Local Batch Normalization." International Conference on Learning Representations. 2021.
+[3] Li, Tian, et al. "Federated optimization in heterogeneous networks." Proceedings of Machine Learning and Systems 2 (2020): 429-450.
 
-[4] Lu, Wang, et al. "Personalized Federated Learning with Adaptive Batchnorm for Healthcare." IEEE Transactions on Big Data (2022).
+[4] Li, Xiaoxiao, et al. "FedBN: Federated Learning on Non-IID Features via Local Batch Normalization." International Conference on Learning Representations. 2021.
 
-[5] Yiqiang, Chen, et al. "MetaFed: Federated Learning among Federations with Cyclic Knowledge Distillation for Personalized Healthcare." FL-IJCAI Workshop 2022.
+[5] Lu, Wang, et al. "Personalized Federated Learning with Adaptive Batchnorm for Healthcare." IEEE Transactions on Big Data (2022).
+
+[6] Yiqiang, Chen, et al. "MetaFed: Federated Learning among Federations with Cyclic Knowledge Distillation for Personalized Healthcare." FL-IJCAI Workshop 2022.
 
 
 ## Contact
