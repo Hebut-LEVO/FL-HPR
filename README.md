@@ -3,6 +3,10 @@
 In order to protect the privacy of human body data and solve the problem of recognizing human body posture 
 from the non-independent and identically distributed human body point cloud data, this project provides a solution framework.
 Please note that this framework is based on personalized federated learning and DCGNN.
+
+## Notice
+The project is still under maintenance, part of the code is still being sorted out and will eventually be updated.If you have any questions, please contact us by email.
+
 ## Implemented Algorithms
 
 As initial version, we support the following algoirthms. We are working on more algorithms. 
@@ -69,6 +73,5 @@ It is easy to design your own method following the steps:
 
 - Jiaxin Wang: wangjx@hebut.edu.cn
 
-## Contributing
 
 
